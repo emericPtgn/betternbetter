@@ -1,6 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
-import MaintabBottombar from './component/ui/MaintabBottombar';
 import BottomNavbar from './component/BottomNavbar';
 import './App.css';
 
