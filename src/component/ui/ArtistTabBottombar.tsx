@@ -7,10 +7,10 @@ interface ArtistTabBottombarProps {
 }
 
 const ArtistTabBottombar: React.FC<ArtistTabBottombarProps> = ({ navigateTo, url }) => {
+  
   const location = useLocation();
-  // console.log(location.pathname)
-  // const endpoint = location.pathname.split('/')[1]
   const activTabStyle = location.pathname === url ? 'text-white' : ''
+
   return (
     <div className={`basis-1/5 flex justify-center items-center cursor-pointer ${activTabStyle}`} onClick={() => navigateTo(url)}>
       <div  className='flex flex-col items-center gap-1 hover:text-white'>
