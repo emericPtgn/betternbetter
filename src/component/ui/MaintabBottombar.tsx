@@ -1,5 +1,5 @@
 import React from 'react'
-import homeIcon from '../../icon/home_24px.png'
+import homeIcon from '../../ressources/icon/home_24px.png'
 
 interface MaintabBottombarProps {
   navigateTo : (url:string) => void,

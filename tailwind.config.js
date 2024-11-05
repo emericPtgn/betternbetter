@@ -17,6 +17,9 @@ module.exports = {
       montserrat: ["Montserrat", "sans-serif"],
       inter: ["Inter", "sans-serif"]
     },
+    backgroundImage: {
+      'hero-pattern': "url('/src/ressources/illustrations/layout_heroSection.svg')",
+    }
   },
   plugins: [],
 }
