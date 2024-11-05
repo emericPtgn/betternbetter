@@ -9,7 +9,7 @@ import useNavigateTo from '../utils/hook/useNavigateTo'
 const BottomNavbar = () => {
   const navigateTo = useNavigateTo();
   return (
-    <section className='fixed bottom-0 w-full  bg-black py-2 sm:hidden'>
+    <section id='bottombarNav' className='fixed bottom-0 w-full  bg-black py-2 sm:hidden z-20'>
         <div className='relative flex h-full items-center justify-around text-neutral-400 text-[10px] font-inter'>
             <ArtistTabBottombar  navigateTo={navigateTo} url={'/artistes'}/>
             <TicketTabBottombar navigateTo={navigateTo} url={'/billets'} />
