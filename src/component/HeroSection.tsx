@@ -1,61 +1,42 @@
 import React, { useRef, useEffect } from 'react';
-import test from '../ressources/illustrations/Calque_1.png';
-import test2 from '../ressources/illustrations/layout_heroSection.svg';
-
+import traitBleu from '../ressources/illustrations/trait_bleu.svg'
+import etoileRouge from '../ressources/illustrations/etoile_rouge.svg'
+import downBorder from '../ressources/illustrations/Rectangle 213 (1).svg'
+import { ChevronDownIcon } from '@heroicons/react/24/solid';
 const HeroSection: React.FC = () => {
-  const mainNavRef = useRef<HTMLElement | null>(null);
-  const heroSectionRef = useRef<HTMLElement | null>(null);
-  const bottombarNavRef = useRef<HTMLElement | null>(null);
-
-  useEffect(() => {
-    mainNavRef.current = document.querySelector('#mainNavbar');
-    heroSectionRef.current = document.querySelector('#heroSection');
-    bottombarNavRef.current = document.querySelector('#bottombarNav');
-
-    const updateHeroHeight = () => {
-      const isMobile = window.innerWidth <= 768;
-
-      if (heroSectionRef.current) {
-        if (isMobile && bottombarNavRef.current) {
-          // Mobile : calcule la hauteur en fonction du bottombar
-          heroSectionRef.current.style.height = `calc(100vh - ${bottombarNavRef.current.offsetHeight}px)`;
-        } else if (mainNavRef.current) {
-          // Desktop : calcule la hauteur en fonction du mainNavbar
-          heroSectionRef.current.style.height = `calc(100vh - ${mainNavRef.current.offsetHeight}px)`;
-        }
-      }
-    };
-
-    // Calcul initial de la hauteur
-    updateHeroHeight();
-
-    // Réécoute le redimensionnement de la fenêtre
-    window.addEventListener('resize', updateHeroHeight);
-    // Écoute le changement d'orientation pour les appareils mobiles
-    window.addEventListener('orientationchange', updateHeroHeight);
-
-    return () => {
-      window.removeEventListener('resize', updateHeroHeight);
-      window.removeEventListener('orientationchange', updateHeroHeight);
-    };
-  }, []);
+  
 
   return (
-    <section id='heroSection' className='w-full h-full'>
+    <section id='heroSection' className='w-full h-[100vh]'>
       <div className='w-full h-full relative'>
-        <div className='absolute z-20 w-full h-full flex flex-col justify-center items-center text-white font-bold font-inter text-4xl'>
-          <span>LIVE EVENT</span>
-          <span>AIX-LES-BAINS</span>
-          <span>DU 07 AU 09 JUIN</span>
+        <div className='absolute z-20 w-full h-full flex flex-col items-center justify-center gap-5 text-center text-white font-bold font-inter '>
+          <div className='w-fit h-fit items-center flex gap-3 '>
+            <img className='w-8 h-auto' src={traitBleu} alt='' />
+            <span className='text-xl'>Music festival</span>
+            <img className='w-8 h-auto' src={traitBleu} alt='' />
+          </div>
+          <div className='flex flex-col text-6xl'>
+            <span>LIVE EVENT</span>
+            <span>AIX LES BAINS</span>
+            <span>DU 7 AU 9 JUIN</span>
+          </div>
+          <div className='w-fit h-fit items-center flex gap-3 '>
+            <img className='w-8 h-auto' src={etoileRouge} alt='' />
+            <span className='text-xl'>SPACE EDITION</span>
+            <img className='w-8 h-auto' src={etoileRouge} alt='' />
+          </div>
         </div>
-        <video src='/2022395-hd_1920_1080_30fps.mp4' autoPlay loop muted className='absolute w-full h-full object-cover -z-10'>
+        <video src='/videoBG2.mp4' muted className='absolute w-full h-full object-cover -z-10'>
         </video>
         <div className='absolute inset-0 bg-black opacity-50 ' />
-        <div className='w-full h-full relative'>
-          <img src={test} alt='' className='absolute bottom-0 z-10'/>
+        {/* <div className='absolute bottom-0 w-full sm:h-[100px] h-[200px]  '>
+          <img src={downBorder} alt='' className='object-cover w-full h-full'/>
+        </div> */}
+        <div className='absolute bottom-0 border-2 border-yellow-300 w-full h-28 flex justify-center'>
+          <ChevronDownIcon className='animate-bounce size-16 text-white' />
         </div>
-
       </div>
+
     </section>
   );
 };

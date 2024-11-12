@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import * as Sentry from "@sentry/react";
 import { BrowserRouter } from 'react-router-dom';
+import { AppProvider } from './ContexteApp';
 Sentry.init({
   dsn: "https://0618c7b8b93ab06fd261dccb6bed2329@o4508064759349248.ingest.de.sentry.io/4508223525486672",
   integrations: [
@@ -26,7 +27,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <BrowserRouter>
+    <AppProvider>
       <App />
+    </AppProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

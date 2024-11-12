@@ -14,7 +14,7 @@ const Navbar: React.FC = () => {
     {text: "Message 3", icon: '🛒'}
   ]
   return (
-    <div id='mainNavbar' className='hidden sm:block w-full bg-black text-white font-inter'>
+    <div id='mainNavbar' className='fixed z-40 hidden sm:block w-full h-[100px]  text-white font-inter'>
       <div className='bg-white text-black w-full py-2 '>
         <div className='w-full h-auto flex justify-center gap-40 items-center'>
           {messages.map((item, index) => (

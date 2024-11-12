@@ -18,7 +18,7 @@ module.exports = {
       inter: ["Inter", "sans-serif"]
     },
     backgroundImage: {
-      'hero-pattern': "url('/src/ressources/illustrations/layout_heroSection.svg')",
+      'hero-pattern': "url('/src/ressources/illustrations/Rectangle_214.svg')",
     }
   },
   plugins: [],
