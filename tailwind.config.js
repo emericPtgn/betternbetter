@@ -11,6 +11,12 @@ module.exports = {
           DEFAULT: "#ED4950",
           100: "#FF9999"
         },
+        blue : {
+          DEFAULT : '#64C4CB'
+        },
+        newWhite : {
+          100 : "#F4F4F5"
+        }
       }, 
     },
     fontFamily: {

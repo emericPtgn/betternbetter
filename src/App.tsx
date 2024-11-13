@@ -5,6 +5,7 @@ import Navbar from './component/Navbar';
 import HeroSection from './component/HeroSection';
 import { DataLoader } from './ressources/data/FetchDataFromApi';
 import Programmation from './component/Programmation';
+import Billeterie from './component/Billeterie';
 
 function App() {
   DataLoader();
@@ -14,6 +15,7 @@ function App() {
       <BottomNavbar />
       <HeroSection />
       <Programmation />
+      <Billeterie />
     </div>
   );
 }
