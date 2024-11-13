@@ -1,7 +1,6 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import traitBleu from '../ressources/illustrations/trait_bleu.svg'
 import etoileRouge from '../ressources/illustrations/etoile_rouge.svg'
-import downBorder from '../ressources/illustrations/Rectangle 213 (1).svg'
 import { ChevronDownIcon } from '@heroicons/react/24/solid';
 const HeroSection: React.FC = () => {
   
@@ -26,7 +25,7 @@ const HeroSection: React.FC = () => {
             <img className='w-8 h-auto' src={etoileRouge} alt='' />
           </div>
         </div>
-        <video src='/videoBG2.mp4' muted className='absolute w-full h-full object-cover -z-10'>
+        <video src='/videoBG2.mp4' loop muted autoPlay playsInline className='absolute w-full h-full object-cover -z-10'>
         </video>
         <div className='absolute inset-0 bg-black opacity-50 ' />
         {/* <div className='absolute bottom-0 w-full sm:h-[100px] h-[200px]  '>
