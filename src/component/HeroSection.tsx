@@ -32,7 +32,7 @@ const HeroSection: React.FC = () => {
         {/* <div className='absolute bottom-0 w-full sm:h-[100px] h-[200px]  '>
           <img src={downBorder} alt='' className='object-cover w-full h-full'/>
         </div> */}
-        <div className='absolute bottom-0 border-2 border-yellow-300 w-full h-28 flex justify-center'>
+        <div className='absolute bottom-0 w-full h-28 flex justify-center'>
           <ChevronDownIcon className='animate-bounce size-16 text-white' />
         </div>
       </div>
