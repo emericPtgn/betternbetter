@@ -6,6 +6,7 @@ import HeroSection from './component/HeroSection';
 import { DataLoader } from './ressources/data/FetchDataFromApi';
 import Programmation from './component/Programmation';
 import Billeterie from './component/Billeterie';
+import Footer from './component/Footer';
 
 function App() {
   DataLoader();
@@ -16,6 +17,7 @@ function App() {
       <HeroSection />
       <Programmation />
       <Billeterie />
+      <Footer />
     </div>
   );
 }
