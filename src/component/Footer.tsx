@@ -9,7 +9,7 @@ const Footer = () => {
             <span>Emploi</span>
             <span>Press</span>
         </div>
-        <div className='grow flex items-center gap-24 text-gray-500'>
+        <div className='grow flex items-center sm:gap-24 justify-between sm:justify-normal text-gray-500'>
             <span>Mentions légales</span>
             <span>©️ Copywrite - 2025</span>
         </div>
