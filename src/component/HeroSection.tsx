@@ -30,13 +30,9 @@ const HeroSection: React.FC = () => {
         <video src='/videoBG2.mp4' loop  autoPlay playsInline className='absolute w-full h-full object-cover -z-10'>
         </video>
         <div className='absolute inset-0 bg-black opacity-50 ' />
-        <div className='absolute bottom-0 w-full sm:h-fit h-fit  '>
-          <img src={downBorder} alt='' className='object-cover w-full h-full'/>
-          <img className='absolute z-30 -bottom-10 left-[40%] size-96' src={marmotte} alt='' />
-        </div>
-        {/* <div className='absolute bottom-0 w-full h-28 flex justify-center'>
+        <div className='absolute bottom-0 w-full h-28 flex justify-center'>
           <ChevronDownIcon className='animate-bounce size-16 text-white' />
-        </div> */}
+        </div>
       </div>
 
     </section>
