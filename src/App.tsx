@@ -7,6 +7,7 @@ import { DataLoader } from './ressources/data/FetchDataFromApi';
 import Programmation from './component/Programmation';
 import Billeterie from './component/Billeterie';
 import Footer from './component/Footer';
+import Newsletter from './component/Newsletter';
 
 function App() {
   DataLoader();
@@ -17,6 +18,7 @@ function App() {
       <HeroSection />
       <Programmation />
       <Billeterie />
+      <Newsletter />
       <Footer />
     </div>
   );
