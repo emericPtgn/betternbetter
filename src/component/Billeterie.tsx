@@ -3,7 +3,6 @@ import traitBleu from '../ressources/illustrations/trait_bleu.svg'
 import planete1 from '../ressources/illustrations/planete_anneau.svg'
 import planete2 from '../ressources/illustrations/planete_crateres.svg'
 import fusee from '../ressources/illustrations/fusée.svg'
-import Button from './ui/Button'
 
 const Billeterie = () => {
   return (
@@ -44,7 +43,7 @@ const Billeterie = () => {
                   </div>
                 </div>
                 <div className='h-1/4 flex items-center justify-center'>
-                  <span>Ven 03</span>
+                  <span>15 000 tickets</span>
                 </div>
               </div>
             </div>
