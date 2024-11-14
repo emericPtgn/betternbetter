@@ -4,20 +4,20 @@ import photo1 from '../ressources/illustrations/festival_360x400.jpg'
 const Newsletter = () => {
   return (
     <section className='flex justify-center w-full h-full py-10'>
-      <div className='flex w-4/5 md:w-3/4 h-fit border-4 border-red-600s p-2 gap-2 rounded-sm'>
+      <div className='flex w-4/5 md:w-3/4 h-fit border-4 border-red-600s p-2 gap-2 rounded-md'>
 
         {/* Partie gauche : image (40 % de la largeur du conteneur) */}
         <div className='w-2/5 md:flex items-center justify-center hidden '>
           <img 
             src={photo1} 
             alt='' 
-            className='w-full h-full object-cover'
+            className='w-full h-full object-cover rounded-md'
             loading="lazy"
           />
         </div>
 
         {/* Partie droite : texte et formulaire (60 % de la largeur du conteneur) */}
-        <div className='flex flex-col w-3/5 bg-newWhite-100 p-4'>
+        <div className='flex flex-col w-3/5 bg-newWhite-100 p-4 rounded-md'>
           <div className='h-1/3'>
             <p className="text-2xl font-bold mb-3">TITLE</p>
             <p className="text-base mb-4 leading-8 font-montserrat">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi dolor sed commodi ad itaque. Libero ducimus repellat laboriosam error obcaecati odio sunt dolores perspiciatis ab cumque recusandae, nesciunt, nemo consequatur.</p>
