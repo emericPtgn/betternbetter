@@ -1,21 +1,25 @@
 import React from 'react';
 import BottomNavbar from './component/BottomNavbar';
 import './App.css';
-import Navbar from './component/Navbar';
-import HeroSection from './component/HeroSection';
-import { DataLoader } from './ressources/data/FetchDataFromApi';
-import Programmation from './component/Programmation';
-import Billeterie from './component/Billeterie';
 
 function App() {
   DataLoader();
   return (
-    <div className='font-montserrat'>
-      <Navbar />
-      <BottomNavbar />
-      <HeroSection />
-      <Programmation />
-      <Billeterie />
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.tsx</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
     </div>
   );
 }
