@@ -4,10 +4,10 @@ import photo1 from '../ressources/illustrations/festival_360x400.jpg'
 const Newsletter = () => {
   return (
     <section className='flex justify-center w-full h-full py-10'>
-      <div className='flex w-4/5 md:w-3/4 h-fit border-4 border-red-600s p-2 gap-2 rounded-md'>
+      <div className='flex w-4/5 md:w-3/4 h-fit border-4 border-white p-2 gap-2 rounded-md'>
 
         {/* Partie gauche : image (40 % de la largeur du conteneur) */}
-        <div className='w-2/5 md:flex items-center justify-center hidden '>
+        <div className='md:w-2/5 w-1/5 md:flex items-center justify-center hidden '>
           <img 
             src={photo1} 
             alt='' 
@@ -17,20 +17,23 @@ const Newsletter = () => {
         </div>
 
         {/* Partie droite : texte et formulaire (60 % de la largeur du conteneur) */}
-        <div className='flex flex-col w-3/5 bg-newWhite-100 p-4 rounded-md'>
+        <div className='flex flex-col md:w-3/5 w-full gap-y-6 bg-newWhite-100 p-4 rounded-md'>
           <div className='h-1/3'>
-            <p className="text-2xl font-bold mb-3">TITLE</p>
-            <p className="text-base mb-4 leading-8 font-montserrat">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi dolor sed commodi ad itaque. Libero ducimus repellat laboriosam error obcaecati odio sunt dolores perspiciatis ab cumque recusandae, nesciunt, nemo consequatur.</p>
+            <p className="lg:text-2xl text-xl font-bold mb-3">Newsletter : accès pré-commandes</p>
+            <p id='test' className="xl:text-base lg:text-sm text-xs">L'inscription gratuite à la newsletter permet de réserver vos places en avant-première et profiter d'offres exclusives.</p>
           </div>
-          <form id='newsletter' method='post' className="space-y-4 flex flex-col justify-between grow">
+          <form id='newsletter' method='post' className=" flex flex-col gap-4 grow">
             <input name='prenom' type='text' placeholder='Prénom' required className="w-full p-2 rounded" />
             <input name='prenom' type='text' placeholder='Nom' required className="w-full p-2 rounded" />
             <input name='email' type='email' placeholder='Email' required className="w-full p-2 rounded" />
-            <p className='text-xs font-montserrat'>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-            <div className="flex align-top start-0 ">
-              <input type='checkbox' required className="mr-2" />
-              <span className='text-xs font-montserrat'>RGPD : Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ab ullam exercitationem neque adipisci reprehenderit rem, libero asperiores officia commodi accusamus</span>
+            <p className='text-xs font-montserrat'>Comment nous traitons les données : <span className='text-blue-950 underline font-semibold'>politique confidentialité</span></p>
+            <div className="flex items-start">
+              <input type="checkbox" required className="mr-2" />
+              <span className="text-xs font-montserrat">
+                RGPD : Vos données sont traitées de manière sécurisée et conforme à la réglementation. Vous pouvez les consulter, modifier ou supprimer à tout moment
+              </span>
             </div>
+
             <input type='submit' value='Subscribe' className="w-full p-2 rounded bg-primary-500 text-white cursor-pointer" />
           </form>
         </div>
