@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from './ui/Button'
 import { ChevronDownIcon, UserCircleIcon, ShoppingCartIcon } from '@heroicons/react/24/solid'
+import { Link } from 'react-router-dom'
 
 interface Message {
   text: string,
@@ -28,8 +29,8 @@ const Navbar: React.FC = () => {
           <div className='flex justify-between items-center'>
             <div className='flex items-center gap-8 md:gap-12'>
               <Button title={'Billeterie'} />
-              <div className='flex gap-2'>
-                <a href='/programme' className='text-sm'>Programmation</a>
+              <div className='flex gap-2'> 
+                <Link to='/programmation' className='text-sm'>Programmation</Link>
                 <ChevronDownIcon className='size-5 text-white'/>
               </div>
             </div>

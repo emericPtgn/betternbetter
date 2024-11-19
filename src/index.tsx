@@ -4,8 +4,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import * as Sentry from "@sentry/react";
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { AppProvider } from './ContexteApp';
+import Root from './routes/Root';
+import Error from './routes/Error';
+import Catalogue from './component/Catalogue';
+import Test from './component/Test';
+import programmationLoader from './ressources/data/programmationLoader';
 Sentry.init({
   dsn: "https://0618c7b8b93ab06fd261dccb6bed2329@o4508064759349248.ingest.de.sentry.io/4508223525486672",
   integrations: [
@@ -21,16 +26,32 @@ Sentry.init({
   replaysOnErrorSampleRate: 1.0, // If you're not already sampling the entire session, change the sample rate to 100% when sampling sessions where errors occur.
 });
 
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Root />,
+    errorElement: <Error />,
+  },
+  {
+    path: '/programmation',
+    element: <Catalogue />,
+    loader: programmationLoader, 
+  },
+  {
+    path: '/test',
+    element: <Test />,
+    loader: programmationLoader
+  }
+])
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
     <AppProvider>
-      <App />
+      <RouterProvider router={router} />
     </AppProvider>
-    </BrowserRouter>
   </React.StrictMode>
 );
 

@@ -9,7 +9,8 @@ const EtatInitial: AppContexte = {
     filtres: [],
     markers: [],
     donneesChargees: false,
-    artistes: []
+    artistes: [],
+    error : []
 };
 
 

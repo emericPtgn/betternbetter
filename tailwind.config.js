@@ -38,7 +38,8 @@ module.exports = {
     },
     fontFamily: {
       montserrat: ["Montserrat", "sans-serif"],
-      inter: ["Inter", "sans-serif"]
+      inter: ["Inter", "sans-serif"],
+      londrina: ["Londrina", "Outline"]
     },
     backgroundImage: {
       'hero-pattern': "url('/src/ressources/illustrations/Rectangle_214.svg')",
