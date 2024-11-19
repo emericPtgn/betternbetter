@@ -3,5 +3,5 @@ import { AppContexte } from "./AppContexte";
 import { AppActions } from "./AppActions";
 
 export interface AppProviderProps {
-    children : ReactNode 
+    children : React.ReactNode 
 }

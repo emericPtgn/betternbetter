@@ -52,7 +52,7 @@ const Programmation = () => {
 >
           {state.artistes.map((item, index) => (
             <span key={index} className={`${index % 2 === 0 ? 'text-white' : 'text-primary'}  px-2`}>
-              {item} /
+              {item.nom} /
             </span>
           ))}
         </div>
@@ -63,7 +63,7 @@ const Programmation = () => {
 >
           {state.artistes.map((item, index) => (
             <span key={index} className={`${index % 2 === 0 ? 'text-white' : 'text-primary'}  px-2`}>
-              {item} /
+              {item.nom} /
             </span>
           ))}
         </div>

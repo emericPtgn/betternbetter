@@ -23,12 +23,19 @@ function reducer(state: AppContexte, action: AppActions): AppContexte {
           programmation: action.payload,
           donneesChargees: true,
         };
-      case 'FetchArtistesNames':
-        console.log('artistes', action.payload);
-        return {
-          ...state,
-          artistes: action.payload
-        };
+      // case 'FetchArtistesNames':
+      //   console.log('artistes', action.payload);
+      //   return {
+      //     ...state,
+      //     artistes: action.payload
+      //   };
+
+        case 'FetchArtistes':
+          console.log('ContextApp', action.payload)
+          return {
+            ...state,
+            artistes: action.payload
+          }
 
       default:
         return state;
